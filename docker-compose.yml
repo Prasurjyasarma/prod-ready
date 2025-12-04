@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: prasurjya/linear-regression-app:latest
+    container_name: linear_regression_dev
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: sleep infinity
